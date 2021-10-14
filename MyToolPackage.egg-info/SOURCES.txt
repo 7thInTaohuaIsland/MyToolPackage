@@ -4,6 +4,7 @@ CommonHelper/fileIO.py
 CommonHelper/imgIO.py
 CommonHelper/imgOperation.py
 CommonHelper/imgParameter.py
+CommonHelper/videoOperation.py
 MyToolPackage.egg-info/PKG-INFO
 MyToolPackage.egg-info/SOURCES.txt
 MyToolPackage.egg-info/dependency_links.txt

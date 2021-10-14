@@ -1,6 +1,6 @@
 import cv2
 
-def frameCapture(path,time_zone,time_interval=1000):
+def frameCapture(path,time_zone,save_path,time_interval=-1):
     '''
     :param path:
     :param time_zone: [[0,30],[50.60],[77,89]],单位s
@@ -25,20 +25,34 @@ def frameCapture(path,time_zone,time_interval=1000):
         fend=int(temp[1]*fps)
         frame_zone.append([fstart,fend])
 
+    #计算帧间隔
+    if time_interval*fps/1000<=1:
+        frame_interval=1
+    else:
+        frame_interval=int(time_interval*fps/1000)
+
     while success:
+        #不符合帧序号要求的continue
+        if current_frame_num%frame_interval!=0:
+            success, frame = videoCapture.read()  # 获取下一帧
+            current_frame_num += 1
+            continue
+        #超过最大帧序数的break
+        if current_frame_num>=frame_zone[zone_num-1][1]:
+            break
+        #判断是否保存
         save_flag = False
         for zone in frame_zone:
             if current_frame_num>=zone[0] and current_frame_num<zone[1]:
                 save_flag=True
                 break
         if save_flag:
-            cv2.imshow('windows', frame)  # 显示
-            cv2.waitKey(int(1000 / int(fps)))  # 延迟
+            cv2.imwrite(save_path+"/frame_{0}.jpg".format(current_frame_num),frame)
         success, frame = videoCapture.read()  # 获取下一帧
         current_frame_num+=1
     videoCapture.release()
 
 if __name__=="__main__":
-    path=r"E:\35\实验\无人机\天津采图0929_0930\DJI_0017.MP4"
+    path=r"E:\35\实验\无人机\0929_0930\DJI_0017.MP4"
     time_zone=[[30,50],[90,100]]
-    frameCapture(path,time_zone)
+    frameCapture(path,time_zone,r'E:\pycode\video_capture\res\test',time_interval=500)
