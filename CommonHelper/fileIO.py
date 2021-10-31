@@ -10,6 +10,7 @@ import os
 import cv2
 import pandas as pd
 import pickle
+import h5py
 
 
 class file_writer:
@@ -67,6 +68,13 @@ class file_writer:
         '''保存字典，name加后缀.pkl'''
         with open(name, 'wb') as f:
             pickle.dump(obj, f, pickle.HIGHEST_PROTOCOL)
+
+    def numpy_to_h5py(self,output_file, arr,dataset="data"):
+        f = h5py.File(output_file, 'w')
+        f.create_dataset(dataset, data=arr, dtype=arr.dtype, compression="gzip")  # data是一个numpy数组
+        # 添加属性
+        f[dataset].attrs['resolution'] = np.array(arr.shape)
+        f.close()
 
 
 class file_reader:
