@@ -16,7 +16,7 @@ class interpolation:
         return img_dst
 
 class MyImshow:
-    def __init__(self,g_image_original:np.ndarray,g_window_name="window",initial_ratio=1,text_color=None):
+    def __init__(self,g_image_original:np.ndarray,g_window_name="window",initial_ratio=1,text_color=None,g_image_pixel_source=np.zeros([1,1])):
         self.g_image_original=g_image_original
         self.k=len(g_image_original.shape)
         self.g_window_wh=[initial_ratio*g_image_original.shape[1],
@@ -32,6 +32,7 @@ class MyImshow:
                        self.g_location_win[0]:self.g_location_win[0] + self.g_window_wh[0]]  # 实际显示的图片
         self.g_image_show_in_window = self.g_image_show.copy()
         self.text_color=text_color
+        self.g_image_pixel_source=g_image_pixel_source
 
     def show(self):
         cv2.namedWindow(self.g_window_name, cv2.WINDOW_NORMAL)
@@ -123,7 +124,18 @@ class MyImshow:
             self.g_image_show_in_window = self.g_image_show.copy()
         elif event == cv2.EVENT_RBUTTONDOWN:
             if self.k==2:
-                pixel = '{:.2f}'.format(self.g_image_show[y,x])
+                if self.g_image_pixel_source.shape[0]==1:
+                    sum=0
+                    count=0
+                    for i in range(-2,2):
+                        for j in range(-2,2):
+                            sum+=self.g_image_pixel_source[y+i, x+i]
+                            count+=1
+                    mean=sum/count
+                    # pixel = '{:.1f}'.format(self.g_image_show[y,x])
+                    pixel = '{:.1f}'.format(mean)
+                else:
+                    pixel = '{:.1f}'.format(self.g_image_pixel_source[y, x])
                 cv2.circle(self.g_image_show_in_window, (x, y), 1, (255, 255, 255), thickness=-1)
                 cv2.putText(self.g_image_show_in_window, pixel, (x, y), cv2.FONT_HERSHEY_PLAIN,
                             1.0, (255, 255, 255), thickness=1)

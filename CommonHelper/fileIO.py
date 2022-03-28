@@ -69,7 +69,7 @@ class file_writer:
         with open(name, 'wb') as f:
             pickle.dump(obj, f, pickle.HIGHEST_PROTOCOL)
 
-    def numpy_to_h5py(self,output_file, arr,dataset="data"):
+    def arr_to_h5py(self,output_file, arr,dataset="data"):
         f = h5py.File(output_file, 'w')
         f.create_dataset(dataset, data=arr, dtype=arr.dtype, compression="gzip")  # data是一个numpy数组
         # 添加属性
@@ -92,6 +92,10 @@ class file_reader:
         '''读字典，name加后缀.pkl'''
         with open(name, 'rb') as f:
             return pickle.load(f)
+
+    def hdf5_reader(self,infile):
+        with h5py.File(infile, "r") as f:
+            return f["image"][()]
 
 def FNameSpilt(abs_file_name):
     '''
