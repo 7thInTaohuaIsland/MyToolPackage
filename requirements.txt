@@ -1,0 +1,5 @@
+numpy
+opencv-python
+pandas
+h5py
+PyQt5

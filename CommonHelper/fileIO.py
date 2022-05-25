@@ -78,14 +78,23 @@ class file_writer:
 
 
 class file_reader:
-    def file_iterate_abs(self,path):
+    def file_iterate_abs(self,path,sort:bool=False,filters:list=[])->list:
         abs_list = []
         for root,dirs,files in os.walk(path):
             if not files:
                 continue
             else:
                 for file in files:
-                    abs_list.append(root+'/'+file)
+                    if len(filters)>0:
+                        for filter in filters:
+                            if filter==os.path.splitext(file)[1]:
+                                abs_list.append(root+'/'+file)
+                                break
+                    else:
+                        abs_list.append(os.path.join(root,file))
+        if sort:
+            abs_list = sorted(abs_list,
+                           key=lambda x: int(os.path.basename(x).split('.')[0]))
         return abs_list
 
     def dict_reader(self,name):
