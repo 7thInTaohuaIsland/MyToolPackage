@@ -1,6 +1,7 @@
 import cv2
 from CommonHelper.fileIO import file_reader
 from CommonHelper.imgOperation import interpolation
+from CommonHelper.fileIO import mkdir
 
 def frameCapture(path,time_zone,save_path,time_interval=-1):
     '''
@@ -9,6 +10,7 @@ def frameCapture(path,time_zone,save_path,time_interval=-1):
     :param time_interval: 保存帧之间的时间间隔，ms
     :return:
     '''
+    mkdir(save_path, rmtree=True)
     videoCapture = cv2.VideoCapture(path)
     # 获得码率及尺寸
     fps = videoCapture.get(cv2.CAP_PROP_FPS)
@@ -21,11 +23,14 @@ def frameCapture(path,time_zone,save_path,time_interval=-1):
     #截取帧序号
     zone_num=len(time_zone)
     frame_zone=[]
-    for i in range(zone_num):
-        temp=time_zone[i]
-        fstart=int(temp[0]*fps)
-        fend=int(temp[1]*fps)
-        frame_zone.append([fstart,fend])
+    if zone_num!=0:
+        for i in range(zone_num):
+            temp=time_zone[i]
+            fstart=int(temp[0]*fps)
+            fend=int(temp[1]*fps)
+            frame_zone.append([fstart,fend])
+    else:
+        frame_zone=[[0,fNUMS-1]]
 
     #计算帧间隔
     if time_interval*fps/1000<=1:
@@ -49,7 +54,7 @@ def frameCapture(path,time_zone,save_path,time_interval=-1):
                 save_flag=True
                 break
         if save_flag:
-            cv2.imwrite(save_path+"/frame_{0}.jpg".format(current_frame_num),frame)
+            cv2.imwrite(save_path+"/{0:>5}.jpg".format(current_frame_num),frame)
         success, frame = videoCapture.read()  # 获取下一帧
         current_frame_num+=1
     videoCapture.release()

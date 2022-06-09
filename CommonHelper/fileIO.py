@@ -4,6 +4,8 @@ Created on Tue Dec 24 11:10:35 2019
 
 @author: 皮皮酥
 """
+import shutil
+
 import numpy as np
 import time
 import os
@@ -116,3 +118,13 @@ def FNameSpilt(abs_file_name):
     name=os.path.splitext(fname)[0]
     suffix=os.path.splitext(fname)[1]
     return [path,name,suffix]
+
+def mkdir(path,rmtree=False):
+    if not os.path.exists(path):
+        os.mkdir(path)
+    else:
+        if rmtree:
+            shutil.rmtree(path)
+            os.mkdir(path)
+        else:
+            pass
