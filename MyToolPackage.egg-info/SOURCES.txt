@@ -41,6 +41,7 @@ PolarHelper/__init__.py
 PolarHelper/__pycache__/PolarBasic.cpython-36.pyc
 PolarHelper/__pycache__/__init__.cpython-36.pyc
 dist/MyToolPackage-2.1.3.tar.gz
+dist/MyToolPackage-2.1.4.tar.gz
 dist/安装指令.txt
 dist/更新日志.docx
 dist/backup/MyToolPackage-1.0.tar.gz

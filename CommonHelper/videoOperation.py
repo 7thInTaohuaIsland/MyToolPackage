@@ -54,7 +54,7 @@ def frameCapture(path,time_zone,save_path,time_interval=-1):
                 save_flag=True
                 break
         if save_flag:
-            cv2.imwrite(save_path+"/{0:>5}.jpg".format(current_frame_num),frame)
+            cv2.imwrite(save_path+"/{:0>5}.jpg".format(current_frame_num),frame)
         success, frame = videoCapture.read()  # 获取下一帧
         current_frame_num+=1
     videoCapture.release()
