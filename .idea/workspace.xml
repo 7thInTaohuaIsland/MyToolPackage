@@ -2,10 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8abaab5d-508b-4748-af7c-9f59e2e0997e" name="Default Changelist" comment="v2.01.00&#10;1.完善视频转换图像程序">
+      <change afterPath="$PROJECT_DIR$/dist/MyToolPackage-2.1.6.tar.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/MyToolPackage.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/MyToolPackage.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CommonHelper/fileIO.py" beforeDir="false" afterPath="$PROJECT_DIR$/CommonHelper/fileIO.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CommonHelper/videoOperation.py" beforeDir="false" afterPath="$PROJECT_DIR$/CommonHelper/videoOperation.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CommonHelper/Decorator.py" beforeDir="false" afterPath="$PROJECT_DIR$/CommonHelper/Decorator.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyToolPackage.egg-info/PKG-INFO" beforeDir="false" afterPath="$PROJECT_DIR$/MyToolPackage.egg-info/PKG-INFO" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyToolPackage.egg-info/SOURCES.txt" beforeDir="false" afterPath="$PROJECT_DIR$/MyToolPackage.egg-info/SOURCES.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/指令.txt" beforeDir="false" afterPath="$PROJECT_DIR$/指令.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,17 +88,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/user/SuZihang/pycode/MyToolPackage&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/home/user/SuZihang/pycode/MyToolPackage",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyIntegratedToolsModulesConfigurable"
   }
-}</component>
-  <component name="RunManager" selected="Python.evaluation">
-    <configuration name="MyAoPMap" type="PythonConfigurationType" factoryName="Python" temporary="true">
+}]]></component>
+  <component name="RunManager" selected="Python.Decorator">
+    <configuration name="Decorator" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="MyToolPackage" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -102,12 +106,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/PolarHelper" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/CommonHelper" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/PolarHelper/MyAoPMap.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/CommonHelper/Decorator.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -130,28 +134,6 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/DLHelper/evaluation.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="imgOperation" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="MyToolPackage" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/CommonHelper" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/CommonHelper/imgOperation.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -204,13 +186,30 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="pytest in Decorator.py" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="MyToolPackage" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/CommonHelper" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/CommonHelper/Decorator.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.Decorator" />
+        <item itemvalue="Python tests.pytest in Decorator.py" />
         <item itemvalue="Python.evaluation" />
         <item itemvalue="Python.videoOperation" />
         <item itemvalue="Python.imgParameter" />
-        <item itemvalue="Python.imgOperation" />
-        <item itemvalue="Python.MyAoPMap" />
       </list>
     </recent_temporary>
   </component>
@@ -270,6 +269,8 @@
       <workItem from="1653460093361" duration="3047000" />
       <workItem from="1653463790695" duration="17000" />
       <workItem from="1654759002346" duration="1295000" />
+      <workItem from="1655949336466" duration="303000" />
+      <workItem from="1656055036869" duration="6293000" />
     </task>
     <task id="LOCAL-00001" summary="v2.01.00&#10;1.完善视频转换图像程序">
       <created>1634191903699</created>
@@ -361,7 +362,9 @@
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/MyToolPackage$imgParameter.coverage" NAME="imgParameter Coverage Results" MODIFIED="1632381890841" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/CommonHelper" />
     <SUITE FILE_PATH="coverage/MyToolPackage$MyAoPMap.coverage" NAME="MyAoPMap Coverage Results" MODIFIED="1631266383208" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PolarHelper" />
+    <SUITE FILE_PATH="coverage/MyToolPackage$pytest_in_Decorator_py.coverage" NAME="pytest in Decorator.py Coverage Results" MODIFIED="1656056385155" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/CommonHelper" />
     <SUITE FILE_PATH="coverage/MyToolPackage$imgOperation.coverage" NAME="imgOperation Coverage Results" MODIFIED="1631499286172" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/CommonHelper" />
+    <SUITE FILE_PATH="coverage/MyToolPackage$Decorator.coverage" NAME="Decorator Coverage Results" MODIFIED="1656060265264" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/CommonHelper" />
     <SUITE FILE_PATH="coverage/MyToolPackage$videoOperation.coverage" NAME="videoOperation Coverage Results" MODIFIED="1641347289267" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/CommonHelper" />
     <SUITE FILE_PATH="coverage/MyToolPackage$evaluation.coverage" NAME="evaluation Coverage Results" MODIFIED="1648459689904" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/DLHelper" />
   </component>
