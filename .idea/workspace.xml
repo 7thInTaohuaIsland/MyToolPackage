@@ -2,14 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8abaab5d-508b-4748-af7c-9f59e2e0997e" name="Default Changelist" comment="v2.01.00&#10;1.完善视频转换图像程序">
-      <change afterPath="$PROJECT_DIR$/dist/MyToolPackage-2.1.6.tar.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/MyToolPackage.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/MyToolPackage.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CommonHelper/Decorator.py" beforeDir="false" afterPath="$PROJECT_DIR$/CommonHelper/Decorator.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyToolPackage.egg-info/PKG-INFO" beforeDir="false" afterPath="$PROJECT_DIR$/MyToolPackage.egg-info/PKG-INFO" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyToolPackage.egg-info/SOURCES.txt" beforeDir="false" afterPath="$PROJECT_DIR$/MyToolPackage.egg-info/SOURCES.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/指令.txt" beforeDir="false" afterPath="$PROJECT_DIR$/指令.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CommonHelper/videoOperation.py" beforeDir="false" afterPath="$PROJECT_DIR$/CommonHelper/videoOperation.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,15 +82,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/home/user/SuZihang/pycode/MyToolPackage",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyIntegratedToolsModulesConfigurable"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/user/SuZihang/pycode/MyToolPackage&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyIntegratedToolsModulesConfigurable&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Python.Decorator">
     <configuration name="Decorator" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="MyToolPackage" />
@@ -270,7 +264,9 @@
       <workItem from="1653463790695" duration="17000" />
       <workItem from="1654759002346" duration="1295000" />
       <workItem from="1655949336466" duration="303000" />
-      <workItem from="1656055036869" duration="6293000" />
+      <workItem from="1656055036869" duration="6439000" />
+      <workItem from="1656637404373" duration="624000" />
+      <workItem from="1660723280133" duration="148000" />
     </task>
     <task id="LOCAL-00001" summary="v2.01.00&#10;1.完善视频转换图像程序">
       <created>1634191903699</created>

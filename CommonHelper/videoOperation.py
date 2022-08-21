@@ -6,8 +6,8 @@ from CommonHelper.fileIO import mkdir
 def frameCapture(path,time_zone,save_path,time_interval=-1):
     '''
     :param path:
-    :param time_zone: [[0,30],[50.60],[77,89]],单位s
-    :param time_interval: 保存帧之间的时间间隔，ms
+    :param time_zone: [[0,30],[50.60],[77,89]],单位s，默认为读取整段视频
+    :param time_interval: 保存帧之间的时间间隔，ms,默认为视频内置fps
     :return:
     '''
     mkdir(save_path, rmtree=True)
