@@ -1,7 +1,7 @@
 from setuptools import find_packages, setup
 setup(
     name='MyToolPackage',
-    version='2.1.6',
+    version='2.2.0',
     packages=find_packages(),
     author='Su Tiaotiao',
     zip_safe=True,

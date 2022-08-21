@@ -30,6 +30,15 @@ CommonHelper/__pycache__/imgOperation.cpython-37.pyc
 DLHelper/__init__.py
 DLHelper/evaluation.py
 DLHelper/visulization.py
+MUHelper/Code_Generator.py
+MUHelper/Infomation_Handler.py
+MUHelper/__init__.py
+MUHelper/example/Code Generator/from upper.h
+MUHelper/example/Code Generator/from upper.xlsx
+MUHelper/example/Infomation_Handler/Recieve from I.xlsx
+MUHelper/example/Infomation_Handler/Send to S.xlsx
+MUHelper/example/Infomation_Handler/log_S.txt
+MUHelper/example/Infomation_Handler/log_S_decode.xls
 MyToolPackage.egg-info/PKG-INFO
 MyToolPackage.egg-info/SOURCES.txt
 MyToolPackage.egg-info/dependency_links.txt
@@ -43,6 +52,7 @@ PolarHelper/__pycache__/__init__.cpython-36.pyc
 dist/MyToolPackage-2.1.3.tar.gz
 dist/MyToolPackage-2.1.4.tar.gz
 dist/MyToolPackage-2.1.5.tar.gz
+dist/MyToolPackage-2.1.6.tar.gz
 dist/安装指令.txt
 dist/更新日志.docx
 dist/backup/MyToolPackage-1.0.tar.gz
